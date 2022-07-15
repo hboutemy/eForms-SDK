@@ -19,6 +19,10 @@
       "name" : "Notice Identifier",
       "readOnly" : true
     }, {
+      "fieldId" : "BT-757-notice",
+      "name" : "Notice Version",
+      "readOnly" : true
+    }, {
       "fieldId" : "BT-702(a)-notice",
       "name" : "Notice Official Language",
       "hidden" : true
@@ -64,7 +68,11 @@
         "name" : "Business Party",
         "fields" : [ {
           "fieldId" : "BT-500-Business",
-          "name" : "Official name"
+          "name" : "Official name",
+          "displayType" : "TEXTAREA"
+        }, {
+          "fieldId" : "OPP-131-Business",
+          "name" : "Senders email address"
         }, {
           "fieldId" : "BT-501-Business-European",
           "name" : "EU Registration Number"
@@ -73,10 +81,12 @@
           "name" : "National registration number"
         }, {
           "fieldId" : "OPP-110-Business",
-          "name" : "Place of registration - Town"
+          "name" : "Place of registration - Town",
+          "displayType" : "TEXTAREA"
         }, {
           "fieldId" : "OPP-111-Business",
-          "name" : "Place of registration - Postcode"
+          "name" : "Place of registration - Postcode",
+          "displayType" : "TEXTAREA"
         }, {
           "fieldId" : "OPP-112-Business",
           "name" : "Place of registration - Country"
@@ -85,7 +95,8 @@
           "name" : "Date of registration"
         }, {
           "fieldId" : "OPP-105-Business",
-          "name" : "Sector of activity"
+          "name" : "Sector of activity",
+          "repeatable" : true
         }, {
           "fieldId" : "BT-505-Business",
           "name" : "Internet address"
@@ -95,19 +106,24 @@
         "name" : "Address",
         "fields" : [ {
           "fieldId" : "BT-510(a)-Business",
-          "name" : "addressline"
+          "name" : "addressline",
+          "displayType" : "TEXTAREA"
         }, {
           "fieldId" : "BT-510(b)-Business",
-          "name" : "addressline"
+          "name" : "addressline",
+          "displayType" : "TEXTAREA"
         }, {
           "fieldId" : "BT-510(c)-Business",
-          "name" : "addressline"
+          "name" : "addressline",
+          "displayType" : "TEXTAREA"
         }, {
           "fieldId" : "BT-512-Business",
-          "name" : "Postal code"
+          "name" : "Postal code",
+          "displayType" : "TEXTAREA"
         }, {
           "fieldId" : "BT-513-Business",
-          "name" : "Town"
+          "name" : "Town",
+          "displayType" : "TEXTAREA"
         }, {
           "fieldId" : "BT-507-Business",
           "name" : "NUTS code"
@@ -120,7 +136,8 @@
         "name" : "Contact",
         "fields" : [ {
           "fieldId" : "BT-502-Business",
-          "name" : "Contact person"
+          "name" : "Contact person",
+          "displayType" : "TEXTAREA"
         }, {
           "fieldId" : "BT-506-Business",
           "name" : "e-mail"
@@ -136,10 +153,12 @@
         "name" : "Publication",
         "fields" : [ {
           "fieldId" : "OPP-120-Business",
-          "name" : "Name of Publication"
+          "name" : "Name of Publication",
+          "displayType" : "TEXTAREA"
         }, {
           "fieldId" : "OPP-121-Business",
-          "name" : "Title of the announcement"
+          "name" : "Title of the announcement",
+          "displayType" : "TEXTAREA"
         }, {
           "fieldId" : "OPP-122-Business",
           "name" : "URL of the announcement"
@@ -149,7 +168,8 @@
         } ]
       }, {
         "fieldId" : "OPP-130-Business",
-        "name" : "Additional information"
+        "name" : "Additional information",
+        "displayType" : "TEXTAREA"
       } ]
     } ]
   }

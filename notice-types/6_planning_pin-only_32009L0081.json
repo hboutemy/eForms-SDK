@@ -83,7 +83,8 @@
         "fields" : [ {
           "fieldId" : "OPT-300-Procedure-Buyer",
           "name" : "Buyer Technical Identifier Reference",
-          "valueList" : [ "ORG", "TPO" ]
+          "repeatable" : true,
+          "valueList" : [ "ORG" ]
         }, {
           "fieldId" : "BT-11-Procedure-Buyer",
           "name" : "Buyer Legal Type"
@@ -107,7 +108,8 @@
         "fields" : [ {
           "fieldId" : "OPT-300-Procedure-SProvider",
           "name" : "Service Provider Technical Identifier Reference",
-          "valueList" : [ "ORG", "TPO" ]
+          "repeatable" : true,
+          "valueList" : [ "ORG" ]
         }, {
           "fieldId" : "OPT-030-Procedure-SProvider",
           "name" : "Provided Service Type"
@@ -133,10 +135,13 @@
           "name" : "Local Law",
           "fields" : [ {
             "fieldId" : "BT-01(c)-Procedure",
-            "name" : "FIXME Legal Basis (ELI)"
+            "name" : "FIXME Legal Basis (ELI)",
+            "repeatable" : true
           }, {
             "fieldId" : "BT-01(d)-Procedure",
-            "name" : "Legal Basis (Text)"
+            "name" : "Legal Basis (Text)",
+            "repeatable" : true,
+            "displayType" : "TEXTAREA"
           } ]
         }, {
           "groupId" : "GR-Procedure-Description",
@@ -146,10 +151,12 @@
             "name" : "Internal Identifier"
           }, {
             "fieldId" : "BT-21-Procedure",
-            "name" : "Title"
+            "name" : "Title",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-24-Procedure",
-            "name" : "Description"
+            "name" : "Description",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-23-Procedure",
             "name" : "Main Nature"
@@ -183,7 +190,8 @@
               "name" : "FIXME Classification Type"
             }, {
               "fieldId" : "BT-263-Procedure",
-              "name" : "FIXME Classification Code"
+              "name" : "FIXME Classification Code",
+              "repeatable" : true
             } ]
           } ]
         }, {
@@ -192,19 +200,24 @@
           "repeatable" : true,
           "fields" : [ {
             "fieldId" : "BT-5101(a)-Procedure",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5101(b)-Procedure",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5101(c)-Procedure",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5131-Procedure",
-            "name" : "City"
+            "name" : "City",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5121-Procedure",
-            "name" : "Post Code"
+            "name" : "Post Code",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5071-Procedure",
             "name" : "FIXME Country Subdivision"
@@ -216,7 +229,8 @@
             "name" : " Services Other"
           }, {
             "fieldId" : "BT-728-Procedure",
-            "name" : "Additional Information"
+            "name" : "Additional Information",
+            "displayType" : "TEXTAREA"
           } ]
         } ]
       }, {
@@ -228,7 +242,8 @@
           "name" : "Additional Information",
           "fields" : [ {
             "fieldId" : "BT-300-Procedure",
-            "name" : "Additional Information"
+            "name" : "Additional Information",
+            "displayType" : "TEXTAREA"
           } ]
         } ]
       } ]
@@ -256,7 +271,8 @@
             "name" : "Previous Planning Identifier"
           }, {
             "fieldId" : "BT-1251-Part",
-            "name" : "Previous Planning Part Identifier"
+            "name" : "Previous Planning Part Identifier",
+            "repeatable" : true
           } ]
         }, {
           "groupId" : "GR-Part-Description",
@@ -266,10 +282,12 @@
             "name" : "Internal Identifier"
           }, {
             "fieldId" : "BT-21-Part",
-            "name" : "Title"
+            "name" : "Title",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-24-Part",
-            "name" : "Description"
+            "name" : "Description",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-23-Part",
             "name" : "Main Nature"
@@ -306,7 +324,8 @@
               "name" : "FIXME Classification Type"
             }, {
               "fieldId" : "BT-263-Part",
-              "name" : "FIXME Classification Code"
+              "name" : "FIXME Classification Code",
+              "repeatable" : true
             } ]
           } ]
         }, {
@@ -315,19 +334,24 @@
           "repeatable" : true,
           "fields" : [ {
             "fieldId" : "BT-5101(a)-Part",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5101(b)-Part",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5101(c)-Part",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5131-Part",
-            "name" : "City"
+            "name" : "City",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5121-Part",
-            "name" : "Post Code"
+            "name" : "Post Code",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5071-Part",
             "name" : "FIXME Country Subdivision"
@@ -339,7 +363,8 @@
             "name" : " Services Other"
           }, {
             "fieldId" : "BT-728-Part",
-            "name" : "Additional Information"
+            "name" : "Additional Information",
+            "displayType" : "TEXTAREA"
           } ]
         }, {
           "groupId" : "GR-Part-PlannedDuration",
@@ -435,7 +460,8 @@
           "name" : "Additional Information",
           "fields" : [ {
             "fieldId" : "BT-300-Part",
-            "name" : "Additional Information"
+            "name" : "Additional Information",
+            "displayType" : "TEXTAREA"
           } ]
         } ]
       }, {
@@ -507,10 +533,12 @@
           "name" : "Submission Tool",
           "fields" : [ {
             "fieldId" : "BT-632-Part",
-            "name" : "Tool Name"
+            "name" : "Tool Name",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-124-Part",
-            "name" : "Tool Atypical URL"
+            "name" : "Tool Atypical URL",
+            "repeatable" : true
           } ]
         }, {
           "groupId" : "GR-Part-AddInfo",
@@ -569,7 +597,8 @@
         "readOnly" : true
       }, {
         "fieldId" : "BT-762-notice",
-        "name" : "Change Reason Description"
+        "name" : "Change Reason Description",
+        "displayType" : "TEXTAREA"
       }, {
         "fieldId" : "BT-758-notice",
         "name" : "Change Notice Version Identifier",
@@ -586,10 +615,12 @@
         "repeatable" : true,
         "fields" : [ {
           "fieldId" : "BT-13716-notice",
-          "name" : "Change Previous Section Identifier"
+          "name" : "Change Previous Section Identifier",
+          "repeatable" : true
         }, {
           "fieldId" : "BT-141(a)-notice",
-          "name" : "Change Description"
+          "name" : "Change Description",
+          "displayType" : "TEXTAREA"
         } ]
       } ]
     }, {
@@ -609,6 +640,7 @@
             "fieldId" : "OPT-200-Organization-Company",
             "name" : "Company Technical Identifier",
             "instanceIdField" : "ORG",
+            "repeatable" : true,
             "hidden" : true
           }, {
             "fieldId" : "BT-633-Organization",
@@ -618,13 +650,16 @@
             "name" : "Company",
             "fields" : [ {
               "fieldId" : "BT-500-Organization-Company",
-              "name" : "Name"
+              "name" : "Name",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-501-Organization-Company",
-              "name" : "Identifier"
+              "name" : "Identifier",
+              "repeatable" : true
             }, {
               "fieldId" : "BT-16-Organization-Company",
-              "name" : "Part Name"
+              "name" : "Part Name",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-505-Organization-Company",
               "name" : "Internet Address"
@@ -637,19 +672,24 @@
             "name" : "Company Address",
             "fields" : [ {
               "fieldId" : "BT-510(a)-Organization-Company",
-              "name" : "Street"
+              "name" : "Street",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-510(b)-Organization-Company",
-              "name" : "Street"
+              "name" : "Street",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-510(c)-Organization-Company",
-              "name" : "Street"
+              "name" : "Street",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-513-Organization-Company",
-              "name" : "City"
+              "name" : "City",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-512-Organization-Company",
-              "name" : "Post Code"
+              "name" : "Post Code",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-507-Organization-Company",
               "name" : "Country Subdivision"
@@ -662,7 +702,8 @@
             "name" : "Company Contact",
             "fields" : [ {
               "fieldId" : "BT-502-Organization-Company",
-              "name" : "Contact Point"
+              "name" : "Contact Point",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-506-Organization-Company",
               "name" : "Contact Email"
@@ -698,10 +739,12 @@
               "hidden" : true
             }, {
               "fieldId" : "BT-500-Organization-TouchPoint",
-              "name" : "Name"
+              "name" : "Name",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-16-Organization-TouchPoint",
-              "name" : "Part Name"
+              "name" : "Part Name",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-505-Organization-TouchPoint",
               "name" : "Internet Address"
@@ -713,19 +756,24 @@
               "name" : "TouchPoint Address",
               "fields" : [ {
                 "fieldId" : "BT-510(a)-Organization-TouchPoint",
-                "name" : "Street"
+                "name" : "Street",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-510(b)-Organization-TouchPoint",
-                "name" : "Street"
+                "name" : "Street",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-510(c)-Organization-TouchPoint",
-                "name" : "Street"
+                "name" : "Street",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-513-Organization-TouchPoint",
-                "name" : "City"
+                "name" : "City",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-512-Organization-TouchPoint",
-                "name" : "Post Code"
+                "name" : "Post Code",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-507-Organization-TouchPoint",
                 "name" : "Country Subdivision"
@@ -738,7 +786,8 @@
               "name" : "TouchPoint Contact",
               "fields" : [ {
                 "fieldId" : "BT-502-Organization-TouchPoint",
-                "name" : "Contact Point"
+                "name" : "Contact Point",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-506-Organization-TouchPoint",
                 "name" : "Contact Email"
@@ -749,65 +798,6 @@
                 "fieldId" : "BT-739-Organization-TouchPoint",
                 "name" : "Contact Fax"
               } ]
-            } ]
-          } ]
-        } ]
-      }, {
-        "groupId" : "GR-UBO-Subsection",
-        "name" : "Ultimate Beneficial Owner",
-        "section" : true,
-        "fields" : [ {
-          "groupId" : "GR-UBO",
-          "name" : "Ultimate Beneficial Owner",
-          "repeatable" : true,
-          "instanceList" : "UBO",
-          "fields" : [ {
-            "fieldId" : "OPT-202-UBO",
-            "name" : "Beneficial Owner Technical Identifier",
-            "instanceIdField" : "UBO",
-            "hidden" : true
-          }, {
-            "fieldId" : "BT-500-UBO",
-            "name" : "Name"
-          }, {
-            "fieldId" : "OPT-160-UBO",
-            "name" : "First Name"
-          }, {
-            "fieldId" : "BT-506-UBO",
-            "name" : "Contact Email Address"
-          }, {
-            "fieldId" : "BT-503-UBO",
-            "name" : "Contact Telephone Number"
-          }, {
-            "fieldId" : "BT-739-UBO",
-            "name" : "Contact Fax"
-          }, {
-            "fieldId" : "BT-507-UBO",
-            "name" : "Country Subdivision"
-          }, {
-            "fieldId" : "BT-510(a)-UBO",
-            "name" : "Street"
-          }, {
-            "fieldId" : "BT-510(b)-UBO",
-            "name" : "Street"
-          }, {
-            "fieldId" : "BT-510(c)-UBO",
-            "name" : "Street"
-          }, {
-            "fieldId" : "BT-512-UBO",
-            "name" : "Post Code"
-          }, {
-            "fieldId" : "BT-513-UBO",
-            "name" : "City"
-          }, {
-            "fieldId" : "BT-514-UBO",
-            "name" : "Country Code"
-          }, {
-            "groupId" : "GR-UBO-Winner",
-            "name" : "TBD Winner",
-            "fields" : [ {
-              "fieldId" : "BT-706-UBO",
-              "name" : "Winner Owner Nationality"
             } ]
           } ]
         } ]

@@ -87,7 +87,8 @@
         "fields" : [ {
           "fieldId" : "OPT-300-Procedure-Buyer",
           "name" : "Buyer Technical Identifier Reference",
-          "valueList" : [ "ORG", "TPO" ]
+          "repeatable" : true,
+          "valueList" : [ "ORG" ]
         } ]
       }, {
         "groupId" : "GR-Procedure-SProvider",
@@ -96,7 +97,8 @@
         "fields" : [ {
           "fieldId" : "OPT-300-Procedure-SProvider",
           "name" : "Service Provider Technical Identifier Reference",
-          "valueList" : [ "ORG", "TPO" ]
+          "repeatable" : true,
+          "valueList" : [ "ORG" ]
         }, {
           "fieldId" : "OPT-030-Procedure-SProvider",
           "name" : "Provided Service Type"
@@ -122,10 +124,13 @@
           "name" : "Local Law",
           "fields" : [ {
             "fieldId" : "BT-01(c)-Procedure",
-            "name" : "FIXME Legal Basis (ELI)"
+            "name" : "FIXME Legal Basis (ELI)",
+            "repeatable" : true
           }, {
             "fieldId" : "BT-01(d)-Procedure",
-            "name" : "Legal Basis (Text)"
+            "name" : "Legal Basis (Text)",
+            "repeatable" : true,
+            "displayType" : "TEXTAREA"
           } ]
         }, {
           "groupId" : "GR-Procedure-Description",
@@ -135,10 +140,12 @@
             "name" : "Internal Identifier"
           }, {
             "fieldId" : "BT-21-Procedure",
-            "name" : "Title"
+            "name" : "Title",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-24-Procedure",
-            "name" : "Description"
+            "name" : "Description",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-23-Procedure",
             "name" : "Main Nature"
@@ -169,7 +176,8 @@
               "name" : "FIXME Classification Type"
             }, {
               "fieldId" : "BT-263-Procedure",
-              "name" : "FIXME Classification Code"
+              "name" : "FIXME Classification Code",
+              "repeatable" : true
             } ]
           } ]
         }, {
@@ -178,19 +186,24 @@
           "repeatable" : true,
           "fields" : [ {
             "fieldId" : "BT-5101(a)-Procedure",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5101(b)-Procedure",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5101(c)-Procedure",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5131-Procedure",
-            "name" : "City"
+            "name" : "City",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5121-Procedure",
-            "name" : "Post Code"
+            "name" : "Post Code",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5071-Procedure",
             "name" : "FIXME Country Subdivision"
@@ -202,7 +215,8 @@
             "name" : " Services Other"
           }, {
             "fieldId" : "BT-728-Procedure",
-            "name" : "Additional Information"
+            "name" : "Additional Information",
+            "displayType" : "TEXTAREA"
           } ]
         } ]
       }, {
@@ -214,7 +228,8 @@
           "name" : "Additional Information",
           "fields" : [ {
             "fieldId" : "BT-300-Procedure",
-            "name" : "Additional Information"
+            "name" : "Additional Information",
+            "displayType" : "TEXTAREA"
           } ]
         } ]
       } ]
@@ -241,7 +256,8 @@
             "name" : "Internal Identifier"
           }, {
             "fieldId" : "BT-21-Lot",
-            "name" : "Title"
+            "name" : "Title",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-24-Lot",
             "name" : "Description",
@@ -283,7 +299,8 @@
               "name" : "FIXME Classification Type"
             }, {
               "fieldId" : "BT-263-Lot",
-              "name" : "FIXME Classification Code"
+              "name" : "FIXME Classification Code",
+              "repeatable" : true
             } ]
           } ]
         }, {
@@ -291,32 +308,39 @@
           "name" : "Procurement Type",
           "fields" : [ {
             "fieldId" : "BT-774-Lot",
-            "name" : "Green Procurement"
+            "name" : "Green Procurement",
+            "repeatable" : true
           }, {
             "fieldId" : "BT-775-Lot",
-            "name" : "Social Procurement"
+            "name" : "Social Procurement",
+            "repeatable" : true
           }, {
             "fieldId" : "BT-776-Lot",
-            "name" : "Innovative Procurement"
+            "name" : "Innovative Procurement",
+            "repeatable" : true
           }, {
             "groupId" : "GR-Lot-ProcurementType-Strategic",
             "name" : "Strategic Procurement",
             "fields" : [ {
               "fieldId" : "BT-06-Lot",
-              "name" : "Strategic Procurement"
+              "name" : "Strategic Procurement",
+              "repeatable" : true
             }, {
               "fieldId" : "BT-777-Lot",
-              "name" : "Strategic Procurement Description"
+              "name" : "Strategic Procurement Description",
+              "displayType" : "TEXTAREA"
             } ]
           }, {
             "groupId" : "GR-Lot-ProcurementType-Accessibility",
             "name" : "Accessibility",
             "fields" : [ {
               "fieldId" : "BT-754-Lot",
-              "name" : "Accessibility"
+              "name" : "Accessibility",
+              "repeatable" : true
             }, {
               "fieldId" : "BT-755-Lot",
-              "name" : "Accessibility Justification"
+              "name" : "Accessibility Justification",
+              "displayType" : "TEXTAREA"
             } ]
           } ]
         }, {
@@ -325,19 +349,24 @@
           "repeatable" : true,
           "fields" : [ {
             "fieldId" : "BT-5101(a)-Lot",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5101(b)-Lot",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5101(c)-Lot",
-            "name" : " Street"
+            "name" : " Street",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5131-Lot",
-            "name" : "City"
+            "name" : "City",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5121-Lot",
-            "name" : "Post Code"
+            "name" : "Post Code",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-5071-Lot",
             "name" : "FIXME Country Subdivision"
@@ -349,7 +378,8 @@
             "name" : " Services Other"
           }, {
             "fieldId" : "BT-728-Lot",
-            "name" : "Additional Information"
+            "name" : "Additional Information",
+            "displayType" : "TEXTAREA"
           } ]
         }, {
           "groupId" : "GR-Lot-PlannedDuration",
@@ -380,36 +410,37 @@
           "name" : "Contract Extension",
           "fields" : [ {
             "fieldId" : "BT-54-Lot",
-            "name" : "Options Description"
+            "name" : "Options Description",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-58-Lot",
             "name" : "Renewal Maximum"
           }, {
             "fieldId" : "BT-57-Lot",
-            "name" : "Renewal Description"
+            "name" : "Renewal Description",
+            "displayType" : "TEXTAREA"
           } ]
         }, {
           "groupId" : "GR-Lot-GpaAgreement",
           "name" : "GPA Agreement",
           "fields" : [ {
             "fieldId" : "BT-115-Lot",
-            "name" : "GPA Coverage",
-            "displayType" : "RADIO"
+            "name" : "GPA Coverage"
           } ]
         }, {
           "groupId" : "GR-Lot-EUFunds",
           "name" : "EU Funds Availability",
           "fields" : [ {
             "fieldId" : "BT-60-Lot",
-            "name" : "EU Funds",
-            "displayType" : "COMBOBOX"
+            "name" : "EU Funds"
           } ]
         }, {
           "groupId" : "GR-Lot-FiscalLegis",
           "name" : "Fiscal Legislation",
           "fields" : [ {
             "fieldId" : "OPT-301-Lot-FiscalLegis",
-            "name" : "Fiscal Legislation Organization Technical Identifier Reference"
+            "name" : "Fiscal Legislation Organization Technical Identifier Reference",
+            "valueList" : [ "ORG", "TPO" ]
           }, {
             "fieldId" : "OPT-110-Lot-FiscalLegis",
             "name" : "Fiscal Legislation URL"
@@ -450,7 +481,8 @@
           "name" : "Additional Information",
           "fields" : [ {
             "fieldId" : "BT-300-Lot",
-            "name" : "Additional Information"
+            "name" : "Additional Information",
+            "displayType" : "TEXTAREA"
           } ]
         } ]
       }, {
@@ -465,7 +497,8 @@
             "name" : "Tenderer Legal Form"
           }, {
             "fieldId" : "BT-76-Lot",
-            "name" : "Tenderer Legal Form Description"
+            "name" : "Tenderer Legal Form Description",
+            "displayType" : "TEXTAREA"
           } ]
         }, {
           "groupId" : "GR-132001",
@@ -475,7 +508,8 @@
             "name" : "Recurrence"
           }, {
             "fieldId" : "BT-95-Lot",
-            "name" : "Recurrence Description"
+            "name" : "Recurrence Description",
+            "displayType" : "TEXTAREA"
           } ]
         }, {
           "groupId" : "GR-Lot-ContractExecutionRequirements",
@@ -488,7 +522,8 @@
             "name" : "Electronic Invoicing"
           }, {
             "fieldId" : "BT-70-Lot",
-            "name" : "Terms Performance"
+            "name" : "Terms Performance",
+            "displayType" : "TEXTAREA"
           } ]
         }, {
           "groupId" : "GR-Lot-PostAwardProcess",
@@ -505,7 +540,8 @@
           "name" : "Financial Terms",
           "fields" : [ {
             "fieldId" : "BT-77-Lot",
-            "name" : "Terms Financial"
+            "name" : "Terms Financial",
+            "displayType" : "TEXTAREA"
           } ]
         } ]
       }, {
@@ -538,7 +574,8 @@
           "name" : "Review Deadlines",
           "fields" : [ {
             "fieldId" : "BT-99-Lot",
-            "name" : "Review Deadline Description"
+            "name" : "Review Deadline Description",
+            "displayType" : "TEXTAREA"
           } ]
         }, {
           "groupId" : "GR-Lot-ReviewOrg",
@@ -589,17 +626,20 @@
             "name" : "Internal Identifier"
           }, {
             "fieldId" : "BT-21-LotsGroup",
-            "name" : "Title"
+            "name" : "Title",
+            "displayType" : "TEXTAREA"
           }, {
             "fieldId" : "BT-24-LotsGroup",
-            "name" : "Description"
+            "name" : "Description",
+            "displayType" : "TEXTAREA"
           } ]
         }, {
           "groupId" : "GR-LotsGroup-AdditionalInformation",
           "name" : "Additional Information",
           "fields" : [ {
             "fieldId" : "BT-300-LotsGroup",
-            "name" : "Additional Information"
+            "name" : "Additional Information",
+            "displayType" : "TEXTAREA"
           } ]
         } ]
       } ]
@@ -679,12 +719,12 @@
               "fieldId" : "OPT-301-LotResult-Financing",
               "name" : "Financing Party (ID reference)",
               "repeatable" : true,
-              "valueList" : [ "ORG", "TPO" ]
+              "valueList" : [ "ORG" ]
             }, {
               "fieldId" : "OPT-301-LotResult-Paying",
               "name" : "Payer Party (ID reference)",
               "repeatable" : true,
-              "valueList" : [ "ORG", "TPO" ]
+              "valueList" : [ "ORG" ]
             } ]
           }, {
             "groupId" : "GR-LotResult-ReviewRequests",
@@ -692,7 +732,8 @@
             "repeatable" : true,
             "fields" : [ {
               "fieldId" : "BT-636-LotResult",
-              "name" : "Buyer Review Requets Irregularity Type"
+              "name" : "Buyer Review Requets Irregularity Type",
+              "repeatable" : true
             }, {
               "fieldId" : "BT-635-LotResult",
               "name" : "Buyer Review Requets Count"
@@ -743,7 +784,7 @@
             "fields" : [ {
               "fieldId" : "BT-13714-Tender",
               "name" : "Tender Lot Identifier",
-              "valueList" : [ "LOT" ]
+              "valueList" : [ "LOT", "GLO" ]
             }, {
               "fieldId" : "OPT-310-Tender",
               "name" : "Tendering Party ID Reference",
@@ -760,7 +801,8 @@
               "name" : "Concession Revenue User"
             }, {
               "fieldId" : "BT-163-Tender",
-              "name" : "Concession Value Description"
+              "name" : "Concession Value Description",
+              "displayType" : "TEXTAREA"
             } ]
           }, {
             "groupId" : "GR-LotTender-Subcontracting",
@@ -770,7 +812,8 @@
               "name" : "Subcontracting Value"
             }, {
               "fieldId" : "BT-554-Tender",
-              "name" : "Subcontracting Description"
+              "name" : "Subcontracting Description",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-555-Tender",
               "name" : "Subcontracting Percentage"
@@ -794,7 +837,6 @@
           "groupId" : "GR-SettledContract",
           "name" : "Settled Contract",
           "repeatable" : true,
-          "instanceList" : "CON",
           "fields" : [ {
             "groupId" : "GR-SettledContract-Modification",
             "name" : "Contract Modification",
@@ -807,28 +849,26 @@
               "name" : "Modification Reason Code"
             }, {
               "fieldId" : "BT-201-Contract",
-              "name" : "Modification Reason Description"
+              "name" : "Modification Reason Description",
+              "displayType" : "TEXTAREA"
             }, {
               "groupId" : "GR-SettledContract-ChangedSection",
               "name" : "Changed Section",
               "repeatable" : true,
               "fields" : [ {
                 "fieldId" : "BT-1501(s)-Contract",
-                "name" : "Modification Previous Section Identifier"
+                "name" : "Modification Previous Section Identifier",
+                "repeatable" : true
               }, {
                 "fieldId" : "BT-202-Contract",
-                "name" : "Modification Description"
+                "name" : "Modification Description",
+                "displayType" : "TEXTAREA"
               } ]
             } ]
           }, {
             "groupId" : "GR-SettledContract-1",
             "name" : "SettledContract 1",
             "fields" : [ {
-              "fieldId" : "OPT-316-Contract",
-              "name" : "Contract Technical Identifier",
-              "instanceIdField" : "CON",
-              "hidden" : true
-            }, {
               "fieldId" : "BT-150-Contract",
               "name" : "Contract Identifier"
             }, {
@@ -839,7 +879,8 @@
               "name" : "Contract Conclusion Date"
             }, {
               "fieldId" : "BT-721-Contract",
-              "name" : "Contract Title"
+              "name" : "Contract Title",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-151-Contract",
               "name" : "Contract URL"
@@ -852,7 +893,7 @@
               "fieldId" : "OPT-300-Contract-Signatory",
               "name" : "Signatory Identifier Reference",
               "repeatable" : true,
-              "valueList" : [ "ORG", "TPO" ]
+              "valueList" : [ "ORG" ]
             } ]
           }, {
             "groupId" : "GR-SettledContract-2",
@@ -862,7 +903,8 @@
               "name" : "Contract EU Funds Identifier"
             }, {
               "fieldId" : "BT-722-Contract",
-              "name" : "Contract EU Funds Name"
+              "name" : "Contract EU Funds Name",
+              "displayType" : "TEXTAREA"
             } ]
           } ]
         } ]
@@ -887,7 +929,8 @@
             "fields" : [ {
               "fieldId" : "OPT-300-Tenderer",
               "name" : "Tenderer ID Reference ",
-              "valueList" : [ "ORG", "TPO" ]
+              "repeatable" : true,
+              "valueList" : [ "ORG" ]
             }, {
               "fieldId" : "OPT-170-Tenderer",
               "name" : "Tendering Party Leader"
@@ -899,12 +942,13 @@
             "fields" : [ {
               "fieldId" : "OPT-301-Tenderer-SubCont",
               "name" : "Subcontractor ID Reference",
-              "valueList" : [ "ORG", "TPO" ]
+              "repeatable" : true,
+              "valueList" : [ "ORG" ]
             }, {
               "fieldId" : "OPT-301-Tenderer-MainCont",
               "name" : "Main Contractor ID Reference",
               "repeatable" : true,
-              "valueList" : [ "ORG", "TPO" ]
+              "valueList" : [ "ORG" ]
             } ]
           } ]
         } ]
@@ -919,7 +963,8 @@
         "readOnly" : true
       }, {
         "fieldId" : "BT-762-notice",
-        "name" : "Change Reason Description"
+        "name" : "Change Reason Description",
+        "displayType" : "TEXTAREA"
       }, {
         "fieldId" : "BT-758-notice",
         "name" : "Change Notice Version Identifier",
@@ -936,10 +981,12 @@
         "repeatable" : true,
         "fields" : [ {
           "fieldId" : "BT-13716-notice",
-          "name" : "Change Previous Section Identifier"
+          "name" : "Change Previous Section Identifier",
+          "repeatable" : true
         }, {
           "fieldId" : "BT-141(a)-notice",
-          "name" : "Change Description"
+          "name" : "Change Description",
+          "displayType" : "TEXTAREA"
         } ]
       } ]
     }, {
@@ -959,6 +1006,7 @@
             "fieldId" : "OPT-200-Organization-Company",
             "name" : "Company Technical Identifier",
             "instanceIdField" : "ORG",
+            "repeatable" : true,
             "hidden" : true
           }, {
             "fieldId" : "BT-633-Organization",
@@ -968,13 +1016,16 @@
             "name" : "Company",
             "fields" : [ {
               "fieldId" : "BT-500-Organization-Company",
-              "name" : "Name"
+              "name" : "Name",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-501-Organization-Company",
-              "name" : "Identifier"
+              "name" : "Identifier",
+              "repeatable" : true
             }, {
               "fieldId" : "BT-16-Organization-Company",
-              "name" : "Part Name"
+              "name" : "Part Name",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-505-Organization-Company",
               "name" : "Internet Address"
@@ -987,19 +1038,24 @@
             "name" : "Company Address",
             "fields" : [ {
               "fieldId" : "BT-510(a)-Organization-Company",
-              "name" : "Street"
+              "name" : "Street",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-510(b)-Organization-Company",
-              "name" : "Street"
+              "name" : "Street",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-510(c)-Organization-Company",
-              "name" : "Street"
+              "name" : "Street",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-513-Organization-Company",
-              "name" : "City"
+              "name" : "City",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-512-Organization-Company",
-              "name" : "Post Code"
+              "name" : "Post Code",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-507-Organization-Company",
               "name" : "Country Subdivision"
@@ -1012,7 +1068,8 @@
             "name" : "Company Contact",
             "fields" : [ {
               "fieldId" : "BT-502-Organization-Company",
-              "name" : "Contact Point"
+              "name" : "Contact Point",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-506-Organization-Company",
               "name" : "Contact Email"
@@ -1042,10 +1099,12 @@
               "hidden" : true
             }, {
               "fieldId" : "BT-500-Organization-TouchPoint",
-              "name" : "Name"
+              "name" : "Name",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-16-Organization-TouchPoint",
-              "name" : "Part Name"
+              "name" : "Part Name",
+              "displayType" : "TEXTAREA"
             }, {
               "fieldId" : "BT-505-Organization-TouchPoint",
               "name" : "Internet Address"
@@ -1057,19 +1116,24 @@
               "name" : "TouchPoint Address",
               "fields" : [ {
                 "fieldId" : "BT-510(a)-Organization-TouchPoint",
-                "name" : "Street"
+                "name" : "Street",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-510(b)-Organization-TouchPoint",
-                "name" : "Street"
+                "name" : "Street",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-510(c)-Organization-TouchPoint",
-                "name" : "Street"
+                "name" : "Street",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-513-Organization-TouchPoint",
-                "name" : "City"
+                "name" : "City",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-512-Organization-TouchPoint",
-                "name" : "Post Code"
+                "name" : "Post Code",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-507-Organization-TouchPoint",
                 "name" : "Country Subdivision"
@@ -1082,7 +1146,8 @@
               "name" : "TouchPoint Contact",
               "fields" : [ {
                 "fieldId" : "BT-502-Organization-TouchPoint",
-                "name" : "Contact Point"
+                "name" : "Contact Point",
+                "displayType" : "TEXTAREA"
               }, {
                 "fieldId" : "BT-506-Organization-TouchPoint",
                 "name" : "Contact Email"
@@ -1093,65 +1158,6 @@
                 "fieldId" : "BT-739-Organization-TouchPoint",
                 "name" : "Contact Fax"
               } ]
-            } ]
-          } ]
-        } ]
-      }, {
-        "groupId" : "GR-UBO-Subsection",
-        "name" : "Ultimate Beneficial Owner",
-        "section" : true,
-        "fields" : [ {
-          "groupId" : "GR-UBO",
-          "name" : "Ultimate Beneficial Owner",
-          "repeatable" : true,
-          "instanceList" : "UBO",
-          "fields" : [ {
-            "fieldId" : "OPT-202-UBO",
-            "name" : "Beneficial Owner Technical Identifier",
-            "instanceIdField" : "UBO",
-            "hidden" : true
-          }, {
-            "fieldId" : "BT-500-UBO",
-            "name" : "Name"
-          }, {
-            "fieldId" : "OPT-160-UBO",
-            "name" : "First Name"
-          }, {
-            "fieldId" : "BT-506-UBO",
-            "name" : "Contact Email Address"
-          }, {
-            "fieldId" : "BT-503-UBO",
-            "name" : "Contact Telephone Number"
-          }, {
-            "fieldId" : "BT-739-UBO",
-            "name" : "Contact Fax"
-          }, {
-            "fieldId" : "BT-507-UBO",
-            "name" : "Country Subdivision"
-          }, {
-            "fieldId" : "BT-510(a)-UBO",
-            "name" : "Street"
-          }, {
-            "fieldId" : "BT-510(b)-UBO",
-            "name" : "Street"
-          }, {
-            "fieldId" : "BT-510(c)-UBO",
-            "name" : "Street"
-          }, {
-            "fieldId" : "BT-512-UBO",
-            "name" : "Post Code"
-          }, {
-            "fieldId" : "BT-513-UBO",
-            "name" : "City"
-          }, {
-            "fieldId" : "BT-514-UBO",
-            "name" : "Country Code"
-          }, {
-            "groupId" : "GR-UBO-Winner",
-            "name" : "TBD Winner",
-            "fields" : [ {
-              "fieldId" : "BT-706-UBO",
-              "name" : "Winner Owner Nationality"
             } ]
           } ]
         } ]
