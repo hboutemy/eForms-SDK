@@ -1,3 +1,7 @@
+# SDK 0.6.3 Release Notes
+
+eForms SDK 0.6.3 has been released to update the legacy notice type definition files. This release was primarily motivated by the internal testing needs of the Publications Office and is not significant for eSenders.
+
 # SDK 0.6.2 Release Notes
 
 eForms SDK 0.6.2 fixes an issue that was overlooked when we released 0.6.1. Only pom.xml was modified again to add a deployment profile for tasks that need to be executed only on release.
