@@ -48,6 +48,13 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- Versions - Plugins -->
+    <version.changes.plugin>2.12.1</version.changes.plugin>
+    <version.gpg.plugin>1.5</version.gpg.plugin>
+    <version.install.plugin>2.5.2</version.install.plugin>
+    <version.javadoc.plugin>3.4.0</version.javadoc.plugin>
+    <maven.source.plugin>3.2.1</maven.source.plugin>
   </properties>
 
   <build>
@@ -72,14 +79,95 @@
       <plugins>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
+          <version>${version.install.plugin}</version>
           <configuration>
             <createChecksum>true</createChecksum>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-changes-plugin</artifactId>
+          <version>${version.changes.plugin}</version>
+          <configuration>
+            <xmlPath>${basedir}/src/main/changes/changes.xml</xmlPath>
+            <skipSnapshots>true</skipSnapshots>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>${maven.source.plugin}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${version.javadoc.plugin}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>${version.gpg.plugin}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-changes-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>validate-changes</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>changes-validate</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>check-changes</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>changes-check</goal>
+            </goals>
+					</execution>
+          <execution>
+            <id>generate-changes-report</id>
+            <phase>package</phase>
+            <goals>
+              <goal>changes-report</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>include-announcement-file</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>announcement-generate</goal>
+            </goals>
+            <configuration>
+              <announcementDirectory>${project.build.outputDirectory}</announcementDirectory>
+              <announcementFile>CHANGES.txt</announcementFile>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-changes-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>changes-report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
 
   <profiles>
     <profile>
@@ -89,7 +177,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-source-plugin</artifactId>
-            <version>3.2.1</version>
             <executions>
               <execution>
                 <id>attach-sources</id>
@@ -102,7 +189,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
-            <version>3.4.0</version>
             <executions>
               <execution>
                 <id>attach-javadocs</id>
@@ -115,7 +201,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.5</version>
             <executions>
               <execution>
                 <id>sign-artifacts</id>

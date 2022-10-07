@@ -1,0 +1,83 @@
+================================================================================
+        ${project.name} - ${project.version} Release notes
+================================================================================
+
+#if ($release.getActions().size() == 0)
+No changes defined in this version.
+#else
+Changelog
+---------
+
+#if ($release.getActions('add').size() !=0)
+New features:
+#set($issue="")
+#foreach($actionItem in $release.getActions('add'))
+#set($action=$actionItem.getAction())
+#if($actionItem.getFixedIssues().size()!=0)
+#foreach($fixedIssue in $actionItem.getFixedIssues())
+#set($issue = ${issue} + $fixedIssue.getIssue()+" - ")
+#end
+#end
+#set($intString = $issue.length() - 3)
+* ${action} #if($!issue != "") (SIRE: $issue.substring(0,$intString)) #end
+#end 
+#end
+
+#if ($release.getActions('fix').size() !=0)
+Fixed Bugs:
+#set($issue="")
+#foreach($actionItem in $release.getActions('fix'))
+#set($action=$actionItem.getAction())
+#if($actionItem.getFixedIssues().size()!=0)
+#foreach($fixedIssue in $actionItem.getFixedIssues())
+#set($issue = ${issue} + $fixedIssue.getIssue()+" - ")
+#end
+#end
+#set($intString = $issue.length() - 3)
+* ${action} #if($!issue != "") (SIRE: $issue.substring(0,$intString)) #end
+#end
+#end
+
+#if ($release.getActions('update').size() !=0)
+Changes:
+#set($issue="")
+#foreach($actionItem in $release.getActions('update'))
+#set($action=$actionItem.getAction())
+#if($actionItem.getFixedIssues().size()!=0)
+#foreach($fixedIssue in $actionItem.getFixedIssues())
+#set($issue = ${issue} + $fixedIssue.getIssue()+" - ")
+#end
+#end
+#set($intString = $issue.length() - 3)
+* ${action} #if($!issue != "") (SIRE: $issue.substring(0,$intString)) #end
+#end
+#end
+
+#if ($release.getActions('remove').size() !=0)
+Removed:
+#set($issue="")
+#foreach($actionItem in $release.getActions('remove'))
+#set($action=$actionItem.getAction())
+#if($actionItem.getFixedIssues().size()!=0)
+#foreach($fixedIssue in $actionItem.getFixedIssues())
+#set($issue = ${issue} + $fixedIssue.getIssue()+" - ")
+#end
+#end
+#set($intString = $issue.length() - 3)
+* ${action} #if($!issue != "") (SIRE: $issue.substring(0,$intString)) #end
+#end
+#end
+## End of main loop
+#end
+#if ($urlDownload)
+Download
+--------
+
+For a manual installation, you can download the ${finalName} here:
+${urlDownload}
+#end
+#if ($project.getDevelopers().size() !=0)
+#foreach($developer in $project.getDevelopers())
+-- ${developer.name}
+#end
+#end
